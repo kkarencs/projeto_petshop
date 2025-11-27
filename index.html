@@ -3,115 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetShop Amigo Fiel - Produtos e Serviços para seu Pet</title>
-    <meta name="description" content="PetShop Amigo Fiel oferece produtos e serviços de qualidade para seu animal de estimação">
+    <title>Pet Amigo - Cuidados Especiais</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>PetShop Amigo Fiel</h1>
-        <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="icon-wrapper me-2">
+                    <i class="bi bi-heart-pulse-fill"></i>
+                </span>
+                <span class="brand-text">Pet Amigo</span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-4">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Loja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary px-4 rounded-pill text-white fw-bold" href="#agendamento">Agendar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="home">
+        <div id="carouselPetshop" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="overlay-gradient"></div>
+                    <img src="images/maltescachorro.jpeg" class="d-block w-100 hero-img" alt="Profissional realizando tosa higiênica em um cachorro feliz">
+                    <div class="carousel-caption text-start">
+                        <div class="container">
+                            <span class="badge badge-warning mb-3 px-3 py-2 rounded-pill fw-bold">Amor em cada detalhe</span>
+                            <h1 class="display-3 fw-bold mb-3">Estética Animal <br>com Excelência</h1>
+                            <p class="lead mb-4 opacity-75">No <strong>Pet Amigo</strong>, temos profissionais qualificados para cuidar do bem-estar do seu melhor amigo.</p>
+                            <a href="#agendamento" class="btn btn-light btn-lg rounded-pill px-5 text-primary fw-bold shadow-lg">Reservar Horário</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="overlay-gradient"></div>
+                    <img src="images/cachorro.jpg" class="d-block w-100 hero-img" alt="Van do Pet Amigo realizando o serviço de tele-busca">
+                    <div class="carousel-caption text-start">
+                        <div class="container">
+                            <span class="badge badge-warning mb-3 px-3 py-2 rounded-pill fw-bold">Comodidade Total</span>
+                            <h1 class="display-3 fw-bold mb-3">Nós buscamos <br>seu Pet</h1>
+                            <p class="lead mb-4 opacity-75">Agende o serviço de Tele-busca e deixe o transporte com a gente.</p>
+                            <a href="#agendamento" class="btn btn-light btn-lg rounded-pill px-5 text-primary fw-bold shadow-lg">Agendar Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPetshop" data-bs-slide="prev">
+                <span class="visually-hidden">Anterior</span> <!-- Acessibilidade -->
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPetshop" data-bs-slide="next">
+                <span class="visually-hidden">Próximo</span> <!-- Acessibilidade -->
+            </button>
+        </div>
+        <div class="wave-container">
+            <svg viewBox="0 0 1440 320">
+                <path fill="#f7f9f8" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
     </header>
-
     <main>
-        <section id="produtos">
-            <h2>Nossos Produtos</h2>
-
-            <section>
-                <h3>Acessórios</h3>
-                
-                <article>
-                    <h4>Coleira Premium Ajustável</h4>
-                    <img src="./images/coleira.jpg" alt="Coleira colorida para cães" width="300" height="300">
-                    <p>Coleira ajustável de alta qualidade, resistente e confortável para seu pet. Disponível em diversas cores e tamanhos.</p>
-                    <p><strong>Preço: R$ 35,90</strong></p>
-                </article>
-
-                <article>
-                    <h4>Brinquedo Bola Interativa</h4>
-                    <img src="./images/brinquedo.jpg" alt="Bola colorida para pets brincarem" width="300" height="300">
-                    <p>Bola resistente e colorida para horas de diversão. Estimula a atividade física e o entretenimento do seu animal.</p>
-                    <p><strong>Preço: R$ 24,90</strong></p>
-                </article>
-            </section>
-
-            <section>
-                <h3>Rações</h3>
-                
-                <article>
-                    <h4>Ração Premium para Cães - 15kg</h4>
-                    <img src="./images/racao-cachorro.jpg" alt="Saco de ração premium para cães" width="300" height="300">
-                    <p>Ração completa e balanceada para cães adultos. Ingredientes selecionados para uma nutrição de qualidade.</p>
-                    <p><strong>Preço: R$ 149,90</strong></p>
-                </article>
-
-                <article>
-                    <h4>Ração Premium para Gatos - 10kg</h4>
-                    <img src="./images/racao-gato.jpg" alt="Saco de ração premium para gatos" width="300" height="300">
-                    <p>Ração especialmente formulada para gatos adultos. Rica em proteínas e nutrientes essenciais para a saúde felina.</p>
-                    <p><strong>Preço: R$ 129,90</strong></p>
-                </article>
-            </section>
-
-            <section>
-                <h3>Produtos de Higiene</h3>
-                
-                <article>
-                    <h4>Shampoo Hipoalergênico Pet - 500ml</h4>
-                    <img src="./images/shampoo.jpg" alt="Frasco de shampoo para pets" width="300" height="300">
-                    <p>Shampoo suave e hipoalergênico, ideal para todos os tipos de pelagem. Deixa seu pet limpo e cheiroso.</p>
-                    <p><strong>Preço: R$ 32,90</strong></p>
-                </article>
-
-                <article>
-                    <h4>Condicionador Hidratante Pet - 500ml</h4>
-                    <img src="./images/condicionador.jpg" alt="Frasco de condicionador para pets" width="300" height="300">
-                    <p>Condicionador que hidrata e desembaraça os pelos, deixando-os macios e brilhantes. Ideal para uso após o shampoo.</p>
-                    <p><strong>Preço: R$ 36,90</strong></p>
-                </article>
-            </section>
+        
+        <!-- Produtos -->
+        <section id="produtos" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h6 class="text-uppercase text-primary fw-bold ls-2">Nossa Seleção</h6>
+                    <h2 class="fw-bold text-dark">Produtos Exclusivos</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card border-0 h-100">
+                            <div class="badge-discount">-10%</div>
+                            <div class="card-img-box">
+                                <img src="images/coleira.jpg" class="img-fluid" alt="Coleira colorida ajustável para cães">
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <p class="text-muted small mb-1">Acessórios</p>
+                                <h5 class="fw-bold text-dark">Coleira Premium</h5>
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
+                                    <span class="text-muted text-decoration-line-through">R$ 45,90</span>
+                                    <span class="text-primary fw-bold fs-5">R$ 35,90</span>
+                                </div>
+                                <button class="btn btn-outline-dark rounded-pill w-100 btn-sm">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card border-0 h-100">
+                            <div class="card-img-box">
+                                <img src="images/brinquedo.jpg" class="img-fluid" alt="Bola de brinquedo interativa">
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <p class="text-muted small mb-1">Diversão</p>
+                                <h5 class="fw-bold text-dark">Bola Interativa</h5>
+                                <div class="mb-3">
+                                    <span class="text-primary fw-bold fs-5">R$ 24,90</span>
+                                </div>
+                                <button class="btn btn-outline-dark rounded-pill w-100 btn-sm">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card border-0 h-100">
+                            <div class="card-img-box">
+                                <img src="images/racao-cachorro.jpg" class="img-fluid" alt="Saco de ração para cães 15kg">
+                            </div>
+                            <div class="card-body text-center p-4">
+                                <p class="text-muted small mb-1">Alimentação</p>
+                                <h5 class="fw-bold text-dark">Ração Cães 15kg</h5>
+                                <div class="mb-3">
+                                    <span class="text-primary fw-bold fs-5">R$ 149,90</span>
+                                </div>
+                                <button class="btn btn-outline-dark rounded-pill w-100 btn-sm">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Serviços -->
+        <section id="servicos" class="py-5">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-5">
+                        <h6 class="text-uppercase text-primary fw-bold ls-2">Nossos Serviços</h6>
+                        <h2 class="fw-bold text-dark mb-4">Experiência completa de Spa para seu pet.</h2>
+                        <p class="text-muted mb-4">No <strong>Pet Amigo</strong>, utilizamos produtos hipoalergênicos e técnicas de manuseio que reduzem o estresse do animal.</p>
+                        <a href="#agendamento" class="btn btn-dark rounded-pill px-4">Agendar Visita</a>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm p-4 h-100 service-card">
+                                    <div class="icon-circle mb-3 bg-green-light text-primary">
+                                        <i class="bi bi-water"></i>
+                                    </div>
+                                    <h5 class="fw-bold">Banho & Tosa</h5>
+                                    <p class="text-muted small">Higienização completa, corte de unhas e limpeza de ouvidos.</p>
+                                    <p class="fw-bold text-primary mb-0">R$ 80,00</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm p-4 h-100 service-card">
+                                    <div class="icon-circle mb-3 bg-gray-light text-dark">
+                                        <i class="bi bi-car-front-fill"></i>
+                                    </div>
+                                    <h5 class="fw-bold">Tele-busca</h5>
+                                    <p class="text-muted small">Buscamos e levamos seu pet com transporte climatizado.</p>
+                                    <p class="fw-bold text-primary mb-0">R$ 120,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Formulário -->
+        <section id="agendamento" class="py-5 bg-white position-relative">
+            <div class="container py-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold">Vamos agendar?</h2>
+                            <p class="text-muted">Preencha os dados abaixo para cadastro e escolha o melhor horário.</p>
+                        </div>
+                        <form id="formAgendamento" onsubmit="confirmarAgendamento(event)" class="row g-3 needs-validation">
+                            
+                            <div class="col-12"><h6 class="text-muted fw-bold border-bottom pb-2 mt-2">01. Dados do Tutor</h6></div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nomeCliente" placeholder="Nome" required>
+                                    <label for="nomeCliente">Nome Completo</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="cpfCliente" placeholder="CPF" required>
+                                    <label for="cpfCliente">CPF</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="emailCliente" placeholder="Email" required>
+                                    <label for="emailCliente">E-mail</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="telefoneCliente" placeholder="Telefone" required>
+                                    <label for="telefoneCliente">Telefone</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="enderecoCliente" placeholder="Endereço Completo" required>
+                                    <label for="enderecoCliente">Endereço Completo (Rua, Nº, Bairro)</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label small text-muted fw-bold">Sexo:</label>
+                                <div class="d-flex gap-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="Feminino" required>
+                                        <label class="form-check-label" for="sexoF">Feminino</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="Masculino">
+                                        <label class="form-check-label" for="sexoM">Masculino</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sexo" id="sexoO" value="Outro">
+                                        <label class="form-check-label" for="sexoO">Outro</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12"><h6 class="text-muted fw-bold border-bottom pb-2 mt-4">02. Dados do Pet</h6></div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nomePet" placeholder="Nome do Pet" required>
+                                    <label for="nomePet">Nome do Pet</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="racaPet" placeholder="Raça" required>
+                                    <label for="racaPet">Raça</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="idadePet" min="0" placeholder="Idade" required>
+                                    <label for="idadePet">Idade (anos)</label>
+                                </div>
+                            </div>
+                            <div class="col-12"><h6 class="text-muted fw-bold border-bottom pb-2 mt-4">03. Serviço e Horário</h6></div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="servicoSelecionado" required>
+                                        <option selected disabled value="">Selecione a modalidade...</option>
+                                        <option value="Banho e Tosa (Entrega no Local)">Banho e Tosa - Eu levo o pet (Entrega no local)</option>
+                                        <option value="Banho e Tosa com Tele-busca">Banho e Tosa - Tele-busca (Buscam em casa)</option>
+                                    </select>
+                                    <label for="servicoSelecionado">Serviço Desejado</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="dataAgendamento" required>
+                                    <label for="dataAgendamento">Data</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="time" class="form-control" id="horaAgendamento" required>
+                                    <label for="horaAgendamento">Horário</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="termos" required>
+                                    <label class="form-check-label small text-muted" for="termos">
+                                        Declaro que as informações são verdadeiras e concordo com os valores.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary w-100 rounded-pill py-3 fw-bold shadow">
+                                    Confirmar Agendamento
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="servicos">
-            <h2>Nossos Serviços</h2>
-
-            <article>
-                <h3>Banho e Tosa</h3>
-                <img src="./images/banho-tosa.jpg" alt="Cachorro sendo tosado em petshop" width="400" height="400">
-                <p>Serviço completo de banho e tosa realizado por profissionais qualificados. Inclui banho com shampoo e condicionador premium, secagem, tosa higiênica ou completa, corte de unhas e limpeza de ouvidos.</p>
-                <p><strong>Preço: A partir de R$ 80,00</strong></p>
-                <p><em>Valor varia de acordo com o porte e raça do animal</em></p>
-            </article>
-
-            <article>
-                <h3>Banho e Tosa com Tele-busca</h3>
-                <img src="./images/tele-busca.jpg" alt="Van de petshop buscando cachorro" width="400" height="400">
-                <p>Serviço completo de banho e tosa com a comodidade da busca e entrega do seu pet em casa. Nosso veículo equipado busca seu animal, realiza todos os procedimentos do banho e tosa e devolve em segurança no endereço cadastrado.</p>
-                <p><strong>Preço: A partir de R$ 120,00</strong></p>
-                <p><em>Valor varia de acordo com o porte, raça do animal e localização</em></p>
-            </article>
-        </section>
     </main>
 
-    <footer id="contato">
-        <h2>Contato</h2>
-        <address>
-            <p><strong>PetShop Amigo Fiel</strong></p>
-            <p>Rua das Flores, 123 - Centro</p>
-            <p>São Paulo - SP, CEP: 01234-567</p>
-            <p>Telefone: (11) 98765-4321</p>
-            <p>Email: contato@petshopamigofiel.com.br</p>
-        </address>
-        
-        <hr>
-        
-        <p><small>Projeto Acadêmico - Desenvolvimento Web</small></p>
-        <p><small>&copy; 2024 PetShop Amigo Fiel - Todos os direitos reservados</small></p>
+    <footer class="text-white py-5 mt-auto">
+        <div class="container text-center">
+            <h4 class="fw-bold mb-4">Pet Amigo</h4>
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <p class="small text-white-50 mb-0">&copy; 2024 Pet Amigo. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
